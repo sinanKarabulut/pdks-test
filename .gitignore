@@ -1,0 +1,6 @@
+# Project exclude paths
+/application/target/
+/common/dao-api/target/
+/common/data/target/
+/common/util/target/
+/dao/target/

@@ -1,0 +1,35 @@
+spring:
+  jpa:
+    generate-ddl: 'true'
+    properties:
+      hibernate:
+        use_sql_comments: 'true'
+        format_sql: 'true'
+        show_sql: 'true'
+    hibernate:
+      ddl-auto: create
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      path: /h2-console
+      enabled: 'true'
+  datasource:
+    password: sa
+    username: sa
+    url: jdbc:h2:mem:pdkstest;DB_CLOSE_DELAY=-1
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration
+logging:
+  level:
+    org:
+      springframework:
+        context: DEBUG
+server:
+  error:
+    whitelabel:
+      enabled: 'false'
+  port: 8081
+
+app:
+  jwtSecret: aydmnsbfmsd
+  jwtExpirationMs: 86400000
