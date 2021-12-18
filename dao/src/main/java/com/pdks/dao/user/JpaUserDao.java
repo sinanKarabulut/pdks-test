@@ -10,5 +10,5 @@ import java.util.UUID;
 
 @Repository
 public interface JpaUserDao extends CrudRepository<UserEntity, UUID> {
-    Optional<User> findByUsername();
+    Optional<User> findByUsername(String username);
 }

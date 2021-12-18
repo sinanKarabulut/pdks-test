@@ -18,7 +18,7 @@ public class UserDao extends JpaAbstractDao<UserEntity, User> implements Dao<Use
     private JpaUserDao repository;
 
     public Optional<User> findByUsername(String username){
-        return repository.findByUsername();
+        return repository.findByUsername(username);
     }
 
     @Override
